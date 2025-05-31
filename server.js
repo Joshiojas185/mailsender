@@ -79,6 +79,11 @@ function sendMail(to, sub, msg) {
     });
 }
 
+app.get('/',(req,res) =>{
+
+    res.send('Hello, My Friend');
+})
+
 app.post('/sendmail', async (req, res) => {
     const { to, sub, msg } = req.body;
 
